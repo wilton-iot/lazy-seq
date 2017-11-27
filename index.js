@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /**
   # lazy-seq
 
@@ -453,3 +454,5 @@ module.exports = {
 
 /// plain CHANGELOG.md
 /// plain CONTRIBUTING.md
+
+return module.exports;});

@@ -37,5 +37,14 @@
   "keywords": [
     "lazy",
     "sequence"
-  ]
+  ],
+  "wilton": {
+    "excludes": [
+        "test",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "Makefile",
+        "lazy-seq.sublime-project"
+    ]
+  }
 }

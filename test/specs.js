@@ -1,9 +1,12 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* global describe:true */
 "use strict";
 
-var lazyseq = require("../index.js");
+var lazyseq = require("lazy-seq/index.js");
 var jsc = require("jsverify");
-var _ = require("underscore");
+var _ = require("lodash");
+_.compose = _.flowRight;
+var describe = require("tape-compat").describe;
 
 function toSeq(arr) {
   return lazyseq.fromArray(arr);
@@ -189,3 +192,5 @@ describe("fold", function () {
     return foldedArr === foldedSeq;
   });
 });
+
+return module.exports;});

@@ -1,9 +1,12 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* global describe:true */
 "use strict";
 
-var lazyseq = require("../index.js");
+var lazyseq = require("lazy-seq/index.js");
 var jsc = require("jsverify");
-var _ = require("underscore");
+var _ = require("lodash");
+_.contains = _.includes;
+var describe = require("tape-compat").describe;
 
 describe("contains", function () {
   jsc.property("≡ !containsNot", "array nat", "nat", function (arr, n) {
@@ -19,3 +22,5 @@ describe("contains", function () {
     return lhs === rhs;
   });
 });
+
+return module.exports;});

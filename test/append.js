@@ -1,9 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* global describe:true */
 "use strict";
 
-var lazyseq = require("../index.js");
+var lazyseq = require("lazy-seq/index.js");
 var jsc = require("jsverify");
-var _ = require("underscore");
+var _ = require("lodash");
+var describe = require("tape-compat").describe;
 
 describe(".append", function () {
   jsc.property("nil ++ nil === nil", function () {
@@ -108,3 +110,5 @@ describe("append", function () {
     });
   });
 });
+
+return module.exports;});
